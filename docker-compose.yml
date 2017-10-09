@@ -1,5 +1,7 @@
 hackmdPostgres:
   image: postgres
+  volumes:
+    - /share/etc/hackmd/postgresql/data:/var/lib/postgresql/data
   environment:
     - POSTGRES_USER=hackmd
     - POSTGRES_PASSWORD=hackmdpass
